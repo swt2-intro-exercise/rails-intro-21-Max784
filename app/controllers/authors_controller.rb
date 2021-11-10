@@ -10,7 +10,7 @@ class AuthorsController < ApplicationController
         @author = Author.new(author_params)
  
         @author.save
-        redirect_to @author     
+        redirect_to @author   
     end
 
     private

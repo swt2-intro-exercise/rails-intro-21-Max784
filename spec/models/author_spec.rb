@@ -9,7 +9,14 @@ RSpec.describe Author, type: :model do
             expect(author.last_name).to eq('B')
             expect(author.homepage).to eq('C.com')
         end
-    end 
+    end
+
+    context "name method works" do
+        it "author.name works" do 
+            expect(author.name).to eq('A B')
+            
+        end
+    end
     
     pending "add some examples to (or delete) #{__FILE__}"
 end
