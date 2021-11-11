@@ -3,4 +3,9 @@ class Paper < ApplicationRecord
     validates :venue, presence: true
     validates :year, presence: true
     validates :year, numericality: { only_integer: true }
+
+    has_many :join_table_author_papers
+    has_many :authors, through: :join_table_author_papers
 end
+
+#rails g model JoinTableAuthorPaper author:references paper:references
